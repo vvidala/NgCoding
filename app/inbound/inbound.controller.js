@@ -2,11 +2,15 @@
     angular.module('app')
         .controller('InboundController', InboundController);
 
-    InboundController.$inject = ['$rootScope'];
-    function InboundController($rootScope) {
+    InboundController.$inject = ['MailService'];
+    function InboundController(mailSvc) {
         var vm = this;
-        $rootScope.sideMenuLinks = [
+        vm.sideMenuLinks = [
             "InboundSML1", "InboundSML2", "InboundSML3"
         ]
+
+        mailSvc.getRecievedMail().then(function(response) {
+            vm.mails = response;
+        })
     }
 })()

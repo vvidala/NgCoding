@@ -35,21 +35,7 @@
    </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col col-md-2">
-                <!-- Side Menu -->
-
-                 <div class="panel panel-default side-menu">
-                    <div class="panel-heading open" id="featured">Featured</div>
-                    <ul class="list-group">
-                        <li class="list-group-item" data-ng-repeat="link in sideMenuLinks"><a>{{link}}</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col col-md-10">
-                <ui-view>Loading...</ui-view>
-            </div>
-        </div>
+        <ui-view>Loading...</ui-view>
     </div>
     <script src="./bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
@@ -57,6 +43,8 @@
     <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
 
     <script src="./app/app.js" charset="utf-8"></script>
+    <script src="./app/services/mail.service.js" charset="utf-8"></script>
+    <script src="./app/sidemenu/sidemenu.component.js" charset="utf-8"></script>
     <script src="./app/inbox/inbox.controller.js" charset="utf-8"></script>
     <script src="./app/inbound/inbound.controller.js" charset="utf-8"></script>
     <script src="./app/outbound/outbound.controller.js" charset="utf-8"></script>

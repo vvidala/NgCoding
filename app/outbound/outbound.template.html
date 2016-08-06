@@ -1,2 +1,27 @@
-<h2>Outbound</h2>
-<p>{{vm.text}}</p>
+<div class="row">
+    <div class="col col-md-2">
+        <side-menu links="vm.sideMenuLinks"></side-menu>
+    </div>
+    <div class="col col-md-10">
+        <h2>Outbound ({{ vm.mails.length }})</h2>
+        <p>{{vm.text}}</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Sent/Recieved</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr data-ng-repeat="mail in vm.mails">
+                    <td>{{mail.name}}</td>
+                    <td>{{mail.email}}</td>
+                    <td>{{ mail.inbound? 'Recieved': 'Sent' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
