@@ -2,9 +2,11 @@
     angular.module('app')
         .controller('InboundController', InboundController);
 
-    InboundController.$inject = [];
-    function InboundController() {
+    InboundController.$inject = ['$rootScope'];
+    function InboundController($rootScope) {
         var vm = this;
-        vm.text = 'This is inbound';
+        $rootScope.sideMenuLinks = [
+            "InboundSML1", "InboundSML2", "InboundSML3"
+        ]
     }
 })()

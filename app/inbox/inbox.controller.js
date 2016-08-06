@@ -2,9 +2,11 @@
     angular.module('app')
         .controller('InboxController', InboxController);
 
-    InboxController.$inject = [];
-    function InboxController() {
+    InboxController.$inject = ['$rootScope'];
+    function InboxController($rootScope) {
         var vm = this;
-        vm.text = 'This is inbox';
+        $rootScope.sideMenuLinks = [
+            'InboxSML1', 'InboxSML2', 'InboxSML3'
+        ]
     }
 })()

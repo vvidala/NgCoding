@@ -2,9 +2,11 @@
     angular.module('app')
         .controller('OutboundController', OutboundController);
 
-    OutboundController.$inject = [];
-    function OutboundController() {
+    OutboundController.$inject = ['$rootScope'];
+    function OutboundController($rootScope) {
         var vm = this;
-        vm.text = 'This is outbound';
+        $rootScope.sideMenuLinks = [
+            'OutboundSML1', 'OutboundSML2', 'OutboundSML3'
+        ]
     }
 })()

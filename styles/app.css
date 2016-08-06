@@ -1,0 +1,42 @@
+
+.side-menu .panel-heading:after{
+    font-weight: normal;
+    float: right;
+
+    transition: transform 0.5s linear;
+}
+.side-menu .panel-heading.open:after{
+    transform: rotate(180deg);
+}
+.side-menu .panel-heading.open + .list-group {
+    visibility: visible;
+    height: auto;
+}
+
+.side-menu .list-group {
+    visibility: hidden;
+    height: 0;
+
+    transition: height 5s linear
+}
+.side-menu .list-group-item:hover a:after{
+    content:'▸';
+    float: right;
+}
+.side-menu .list-group-item:hover a {
+    font-weight: bold;
+    color: #666666;
+    display: block;
+    text-decoration: none;
+}
+.side-menu .list-group-item:hover {
+    background-color: #e5e5e5
+}
+.side-menu .list-group-item {
+    padding:0px;
+}
+.side-menu .list-group-item a {
+    line-height: 2.5em;
+    padding-left:10px;
+    padding-right: 10px;
+}

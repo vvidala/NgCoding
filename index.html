@@ -4,6 +4,7 @@
     <base href='/'></base>
     <title>Angular Bootstrap Demo</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body ng-app="app">
     <div class="navbar navbar-default">
@@ -33,7 +34,23 @@
        </div>
    </div>
 
-    <ui-view>Loading...</ui-view>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-2">
+                <!-- Side Menu -->
+
+                 <div class="panel panel-default side-menu">
+                    <div class="panel-heading open" id="featured">Featured</div>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-ng-repeat="link in sideMenuLinks"><a>{{link}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-md-10">
+                <ui-view>Loading...</ui-view>
+            </div>
+        </div>
+    </div>
     <script src="./bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="./bower_components/angular/angular.min.js" charset="utf-8"></script>
