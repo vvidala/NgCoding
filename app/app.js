@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('app', ['ui.router']);
+    var app = angular.module('app', ['ui.router', 'ui.bootstrap']);
 
     app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
         // For any unmatched url, redirect to /state1

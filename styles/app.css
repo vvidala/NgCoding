@@ -40,3 +40,11 @@
     padding-left:10px;
     padding-right: 10px;
 }
+
+.date-pick input.form-control {
+    background-color: #fff;
+}
+
+.date-pick .input-group-btn > .btn{
+    padding: 9px 12px;
+}

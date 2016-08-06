@@ -1,8 +1,39 @@
 <div class="row">
-    <div class="col col-md-2">
+    <div class="col col-md-3">
         <side-menu links="vm.sideMenuLinks"></side-menu>
+
+        <div class="panel panel-default">
+            <div class="panel-heading open" id="featured">Filter</div>
+
+             <ul class="list-group">
+                 <li class="list-group-item">
+                     <div class="form-group">
+                         <label for="exampleInputEmail1">Email address</label>
+                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                     </div>
+                 </li>
+                 <li class="list-group-item">
+                     <div class="form-group">
+                         <label for="exampleInputEmail1">Sent Date</label>
+                         <p class="input-group date-pick" ng-click="popup1.opened = !popup1.opened">
+                            <input type="text" class="form-control" uib-datepicker-popup="MMM dd, yyyy" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" readonly alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                     </div>
+                 </li>
+                 <li class="list-group-item">
+                     <div class="form-group">
+                         <label for="exampleInputEmail1">Body (contains)</label>
+                         <textarea type="email" class="form-control" id="exampleInputEmail1"></textarea>
+                     </div>
+                 </li>
+             </ul>
+        </div>
+
     </div>
-    <div class="col col-md-10">
+    <div class="col col-md-9">
         <h2>Mailbox ({{ vm.mails.length }})</h2>
         <p>{{vm.text}}</p>
 
