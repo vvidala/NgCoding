@@ -41,8 +41,8 @@
     padding-right: 10px;
 }
 
-.date-pick input.form-control {
-    background-color: #fff;
+.form-control[readonly] {
+    background-color: #fff !important;
 }
 
 .date-pick .input-group-btn > .btn{
