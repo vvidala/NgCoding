@@ -11,23 +11,17 @@
             .state('inbox', {
                 url: "/inbox",
                 templateUrl: "/app/inbox/inbox.template.html",
-                controller: function($scope) {
-                    $scope.items = ["A", "List", "Of", "Items"];
-                }
+                controller: 'InboxController as vm'
             })
             .state('inbound', {
                 url: "/inbound",
                 templateUrl: "/app/inbound/inbound.template.html",
-                controller: function($scope) {
-                    $scope.things = ["A", "Set", "Of", "Things"];
-                }
+                controller: 'InboundController as vm'
             })
             .state('outbound', {
                 url: "/outbound",
                 templateUrl: "/app/outbound/outbound.template.html",
-                controller: function($scope) {
-                    $scope.things = ["A", "Set", "Of", "Things"];
-                }
+                controller: 'OutboundController as vm'
             });
     });
 })()
