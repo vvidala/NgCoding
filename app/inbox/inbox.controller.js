@@ -19,6 +19,7 @@
         })
 
         vm.filterMail = function() {
+
             vm.filteredMails = vm.allmails.filter(function(mail) {
                 var match = true;
                 if(vm.search.email && vm.search.email !== mail.email) {
@@ -27,8 +28,8 @@
                 if(vm.search.text && mail.content.indexOf(vm.search.text) === -1) {
                     match = false;
                 }
-                if(vm.search.date && new Date(vm.search.date) === new Date(mail.sent)) {
-
+                if(vm.search.date && mail.sent === vm.search.date) {
+                    match = false;
                 }
                 return match;
             });
