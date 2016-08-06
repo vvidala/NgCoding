@@ -50,11 +50,14 @@
             </thead>
 
             <tbody>
-                <tr data-ng-repeat="mail in vm.filteredMails">
+                <tr ng-repeat-start="mail in vm.filteredMails">
                     <td>{{ mail.name }}</td>
                     <td>{{ mail.email }}</td>
                     <td>{{ mail.sent }}</td>
                     <td>{{ mail.inbound? 'Recieved': 'Sent' }}</td>
+                </tr>
+                <tr ng-repeat-end>
+                    <td style="border-top: 0" colspan="4">{{mail.content}}</td>
                 </tr>
             </tbody>
         </table>
