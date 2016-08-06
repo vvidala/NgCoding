@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Bootstrap Demo</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="index.php">Coding Challenge</a>
+            </div>
+            <div class="navbar-header pull-right">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <p class="navbar-text">
+                   <b> LoggedIn User</b>
+               </p>
+           </div>
+
+           <div class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                   <li class="active"><a href="index.php">Inbox</a></li>
+                   <li><a href="about.php">Inbound</a></li>
+                   <li><a href="contact.php">Outbound</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+
+
+
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="./bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+</body>
+</html>

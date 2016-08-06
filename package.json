@@ -1,0 +1,16 @@
+{
+  "name": "ng-coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "start": "./node_modules/.bin/simple-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
